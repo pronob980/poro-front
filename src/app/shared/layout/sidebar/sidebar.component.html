@@ -1,0 +1,73 @@
+<nav class="col-md-2 d-none d-md-block sidebar">
+  <div class="sidebar-sticky">
+    <div class="brand_info">
+      <img src="../../../../assets/img/logo.svg" class="logo mr-2" alt="logo">
+      <span class="brand_name">পড়</span>
+    </div>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/home" routerLinkActive="active">
+          <i class="material-icons">
+            home
+          </i>
+          হোম
+        </a>
+      </li>
+      <li class="custom_nav_item">
+        <a class="nav-link dropdown_btn" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed"
+          aria-controls="collapseBasic">
+          <div>
+            <i class="material-icons">
+              menu_book
+            </i>
+            <span>গ্রন্থাগার</span>
+          </div>
+          <i class="material-icons d-inline" *ngIf="!isCollapsed">
+            keyboard_arrow_up
+          </i>
+          <i class="material-icons d-inline" *ngIf="isCollapsed">
+            keyboard_arrow_down
+          </i>
+        </a>
+      </li>
+      <li class="nav-item dropdown_field" id="collapseBasic" [collapse]="isCollapsed" [isAnimated]="true">
+        <a class="nav-link">
+          স্কুল
+        </a>
+        <a class="nav-link">
+          কলেজ
+        </a>
+        <a class="nav-link">
+          বিশ্ববিদ্যালয়
+        </a>
+        <a class="nav-link">
+          অন্যান্য
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          <i class="material-icons">
+            bookmark_border
+          </i>
+          বুকমার্ক
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          <i class="material-icons">
+            create
+          </i>
+          রিভিউ
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          <i class="material-icons">
+            shop
+          </i>
+          দোকান
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,54 @@
+@import './sidebar.scss';
+@import './button.scss';
+@import './color.scss';
+
+body {
+  font-family: 'Hind Siliguri', sans-serif;
+  overflow-x: hidden;
+  [role="main"] {
+    padding-top: 133px;
+  }
+
+    @media (min-width: 768px) {
+    [role="main"] {
+        padding-top: 2rem;
+
+
+    }
+    }
+
+    .myBooks {
+      overflow-x: auto; 
+      overflow-y: hidden; 
+      white-space: nowrap;
+
+      a {
+        width: 20%;
+        display: inline-block;
+        padding-right: 1rem;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      &::-webkit-scrollbar {
+        height: 8px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #C4C4C4; 
+        border-radius: 50rem;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background: #888; 
+      }
+    }
+
+}
+
+.mb-rem-2 {
+   margin-bottom: 2rem; 
+}
+
+

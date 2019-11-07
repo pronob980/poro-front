@@ -1,0 +1,16 @@
+@import './variables.scss';
+
+.btn {
+    border-radius: 50rem;
+
+    &.btn-primary {
+        color: #fff;
+        background-color: $brand_purple;
+        border-color: $brand_purple; 
+
+        &:hover {
+            background: $brand_blue;
+            border-color: $brand_blue;
+        }
+    }
+}
