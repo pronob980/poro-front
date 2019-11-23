@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/core/services';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
   isCollapsed = true;
-  constructor() { }
+  categories: any;
+  constructor(private data: DataService) { }
 
   ngOnInit() {
+    this.data.getAllCategories().subscribe(data => {
+      this.categories = data
+      console.log(this.categories);
+    })
   }
 
 }

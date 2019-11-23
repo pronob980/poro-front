@@ -31,10 +31,10 @@
         </a>
       </li>
       <li class="nav-item dropdown_field" id="collapseBasic" [collapse]="isCollapsed" [isAnimated]="true">
-        <a class="nav-link">
-          স্কুল
+        <a class="nav-link" *ngFor="let category of categories" [routerLink]="[category.id]" routerLinkActive="router-link-active">
+          {{ category.title }}
         </a>
-        <a class="nav-link">
+        <!-- <a class="nav-link">
           কলেজ
         </a>
         <a class="nav-link">
@@ -42,7 +42,7 @@
         </a>
         <a class="nav-link">
           অন্যান্য
-        </a>
+        </a> -->
       </li>
       <li class="nav-item">
         <a class="nav-link">

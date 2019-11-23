@@ -28,6 +28,10 @@ export class DataService {
     return this.http.get(`${environment.api_url}books/category/${cat_id}`);
   }
 
+  getAllCategories(){
+    return this.http.get(`${environment.api_url}/books/categories`)
+  }
+
 
   private handleError(errorResponse) {
     if (errorResponse.error instanceof ErrorEvent) {
@@ -37,42 +41,6 @@ export class DataService {
     }
 
     return throwError("There is a problem in loading data.");
-  }
-
-  convertToJson(value: any) {
-    value = value.split("\n");
-
-    var attrs = value.splice(0, 1);
-
-    var result = value.map(function (row) {
-      var obj = {};
-      var rowData = row.split(",");
-      attrs[0].split(",").forEach(function (val, idx) {
-        obj = constructObj(val, obj, rowData[idx]);
-      });
-      return obj;
-    });
-
-    function constructObj(str, parentObj, data) {
-      if (str.split("//").length === 1) {
-        parentObj[str] = data;
-        return parentObj;
-      }
-
-      var curKey = str.split("//")[0];
-      if (!parentObj[curKey]) parentObj[curKey] = {};
-      parentObj[curKey] = constructObj(
-        str
-          .split("//")
-          .slice(1)
-          .join("//"),
-        parentObj[curKey],
-        data
-      );
-      return parentObj;
-    }
-
-    return result;
   }
 
   objectToUrl(obj) {

@@ -7,12 +7,14 @@ import { HeaderComponent } from './layout/header/header.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
     imports: [
         CommonModule,
         CollapseModule,
+        RouterModule,
         HttpClientModule
     ],
     declarations: [
