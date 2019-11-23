@@ -7,17 +7,25 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './home/home.component';
 import { DataService } from './core/services';
+import { BookComponent } from './book/book.component';
+import { PdfComponent } from './pdf/pdf.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    BookComponent,
+    PdfComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    PdfViewerModule,
+    NgxExtendedPdfViewerModule
   ],
   bootstrap: [AppComponent]
 })

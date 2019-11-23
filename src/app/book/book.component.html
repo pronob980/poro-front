@@ -1,0 +1,13 @@
+<div class="myBooks">
+    <a [routerLink]="['/book', book.id]" routerLinkActive="router-link-active" *ngFor="let book of books">
+        <img src="http://192.168.1.2:8000/thumbnails/{{book.thumbnail}}" class="img-fluid rounded mb-1">
+        <h6 class="text-dark font-weight-bold mb-0">{{book.title}}</h6>
+        <small class="text-muted">{{book.author}}</small>
+    </a>
+</div>
+
+
+<div *ngIf="!books">
+    এই ক্যাটাগরিতে এখনো কোন বই নেই!
+    শীঘ্রই আসছে
+</div>

@@ -25,7 +25,11 @@ export class DataService {
   }
 
   getBookByCategoryId(cat_id) {
-    return this.http.get(`${environment.api_url}books/category/${cat_id}`);
+    return this.http.get(`${environment.api_url}/books/category/${cat_id}`);
+  }
+
+  getBookById(book_id) {
+    return this.http.get(`${environment.api_url}/books/${book_id}`);
   }
 
   getAllCategories(){

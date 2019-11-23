@@ -25,13 +25,32 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "dist/ngx-extended-pdf-viewer/assets/locale",
+                "output": "/assets/locale/"
+              },
+              { "glob": "**/pdf.worker*.js", "input": "dist/ngx-extended-pdf-viewer/assets", "output": "/assets/" },
+              {
+                "glob": "**/locale.properties",
+                "input": "dist/ngx-extended-pdf-viewer/assets/locale",
+                "output": "/assets/locale/"
+              },
+              {
+                "glob": "**/*",
+                "input": "dist/ngx-extended-pdf-viewer/assets/images",
+                "output": "/assets/images"
+              }
             ],
             "styles": [
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/ngx-extended-pdf-viewer/assets/pdf.js",
+              "node_modules/ngx-extended-pdf-viewer/assets/viewer.js"
+            ]
           },
           "configurations": {
             "production": {

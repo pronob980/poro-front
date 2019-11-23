@@ -7,7 +7,7 @@ import { DataService } from 'src/app/core/services';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-  isCollapsed = true;
+  isCollapsed = false;
   categories: any;
   constructor(private data: DataService) { }
 
