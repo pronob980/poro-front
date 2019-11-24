@@ -4,11 +4,20 @@ import { HomeComponent } from './home/home.component';
 import { BookComponent } from './book/book.component';
 import { PdfComponent } from './pdf/pdf.component';
 import { BookmarkComponent } from './bookmark/bookmark.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
   {
     path: '', redirectTo: '/home', pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'register',
+    component: LoginComponent
   },
   {
     path: 'home', component: HomeComponent

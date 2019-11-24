@@ -21,7 +21,7 @@ export class DataService {
   //// Class service
 
   getAllBooks() {
-    return this.http.get(`${environment.api_url}books`);
+    return this.http.get(`${environment.api_url}/books`);
   }
 
   getBookByCategoryId(cat_id) {
