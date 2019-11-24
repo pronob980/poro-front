@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { BookComponent } from './book/book.component';
 import { PdfComponent } from './pdf/pdf.component';
+import { BookmarkComponent } from './bookmark/bookmark.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,9 @@ const routes: Routes = [
   },
   {
     path: 'home', component: HomeComponent
+  },
+  {
+    path: 'bookmarks', component: BookmarkComponent
   },
   {
     path: 'book/:book_id', component: PdfComponent

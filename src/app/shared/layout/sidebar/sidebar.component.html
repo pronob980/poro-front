@@ -1,7 +1,7 @@
 <nav class="col-md-2 d-none d-md-block sidebar">
   <div class="sidebar-sticky">
     <div class="brand_info">
-      <img src="../../../../assets/img/logo.svg" class="logo mr-2" alt="logo">
+      <img src="assets/img/logo.svg" class="logo mr-2" alt="logo">
       <span class="brand_name">পড়</span>
     </div>
     <ul class="nav flex-column">
@@ -36,7 +36,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link">
+        <a [routerLink]="['/bookmarks']" routerLinkActive="active" class="nav-link">
           <i class="material-icons">
             bookmark_border
           </i>

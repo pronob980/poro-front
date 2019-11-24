@@ -11,13 +11,15 @@ import { BookComponent } from './book/book.component';
 import { PdfComponent } from './pdf/pdf.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
+import { BookmarkComponent } from './bookmark/bookmark.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     BookComponent,
-    PdfComponent
+    PdfComponent,
+    BookmarkComponent
   ],
   imports: [
     BrowserModule,
