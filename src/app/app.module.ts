@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './home/home.component';
-import { DataService, JwtService } from './core/services';
 import { BookComponent } from './book/book.component';
 import { PdfComponent } from './pdf/pdf.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
@@ -14,8 +13,7 @@ import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 import { BookmarkComponent } from './bookmark/bookmark.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { UserService } from './core/services/user.service';
-import { ApiService } from './core/services/api.service';
+import { DokanComponent } from './dokan/dokan.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +22,8 @@ import { ApiService } from './core/services/api.service';
     BookComponent,
     PdfComponent,
     BookmarkComponent,
-    LoginComponent
+    LoginComponent,
+    DokanComponent
   ],
   imports: [
     BrowserModule,
@@ -36,10 +35,6 @@ import { ApiService } from './core/services/api.service';
     NgxExtendedPdfViewerModule
   ],
   providers: [
-    UserService,
-    ApiService,
-    JwtService,
-    DataService
   ],
   bootstrap: [AppComponent]
 })
