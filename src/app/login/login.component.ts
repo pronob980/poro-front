@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
 
   authType: String = '';
   title: String = '';
-  errors: Errors = {errors: {}};
+  errors: Errors = { errors: {} };
   isSubmitting = false;
   authForm: FormGroup;
 
@@ -40,28 +40,28 @@ export class LoginComponent implements OnInit {
       this.title = (this.authType === 'login') ? 'Login' : 'Create an account';
       // add form control for username if this is the register page
       if (this.authType === 'register') {
-        this.authForm.addControl('username', new FormControl());
+        this.authForm.addControl('name', new FormControl());
       }
     });
   }
 
   submitForm() {
     this.isSubmitting = true;
-    this.errors = {errors: {}};
+    this.errors = { errors: {} };
 
     const credentials = this.authForm.value;
     this.userService
-    .attemptAuth(this.authType, credentials)
-    .subscribe(
-      data => {
-        console.log(data);
-        this.router.navigate(['/'])
-      },
-      err => {
-        this.errors = err;
-        this.isSubmitting = false;
-      }
-    );
+      .attemptAuth(this.authType, credentials)
+      .subscribe(
+        data => {
+          console.log(data);
+          this.router.navigate(['/'])
+        },
+        err => {
+          this.errors = err;
+          this.isSubmitting = false;
+        }
+      );
   }
 
 }

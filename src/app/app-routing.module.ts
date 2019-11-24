@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './core/guard/auth.guard';
 import { NoAuthGuard } from './core/guard/no-auth.guard';
 import { DokanComponent } from './dokan/dokan.component';
+import { AdComponent } from './ad/ad.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,9 @@ const routes: Routes = [
   },
   {
     path: 'dokan', component: DokanComponent
+  },
+  {
+    path: 'ad', component: AdComponent
   },
   {
     path: 'book/:book_id', component: PdfComponent

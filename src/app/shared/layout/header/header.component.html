@@ -18,14 +18,20 @@
         </div>
     </div>
 
+    <div *isLogged="true" class="mx-4 text-left text-md-center text-white">
+        <a [routerLink]="['/ad']" routerLinkActive="active" class="btn btn-primary mt-0 mt-md-1"
+            style="padding: .375rem 2rem;">বই এড
+        </a>
+    </div>
+
     <!-- Topbar Navbar -->
     <ul class="navbar-nav ml-auto">
 
-        <div *isLogged="false" class="col-2 text-left text-md-center">
+        <div *isLogged="false" class="text-left text-md-center">
             <a [routerLink]="['/login']" routerLinkActive="active" class="btn btn-primary mt-0 mt-md-1"
                 style="padding: .375rem 2rem;">লগইন</a>
         </div>
-        <div *isLogged="true" class="col-2 text-left text-md-center">
+        <div *isLogged="true" class=" text-left text-md-center">
 
             <div class="btn-group" dropdown placement="bottom right">
                 <a style="cursor: pointer;" id="button-alignment" dropdownToggle class="dropdown-toggle"
